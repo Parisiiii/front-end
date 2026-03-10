@@ -1,97 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR" data-theme="cupcake">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastrinho</title>
+  <!-- Tailwind CSS + DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
     body {
-      background-color: #c0c0c0;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 14px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
-    h1 {
-      text-align: center;
-    }
-    table {
-      margin: 0 auto;
-      border: 2px solid black;
-      background-color: #ffffff;
-      padding: 10px;
-    }
-    td {
-      padding: 4px;
-    }
-    input[type="submit"] {
-      margin-top: 8px;
+    
+    /* Custom gradient background */
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
     }
   </style>
 </head>
-<body>
+<body class="gradient-bg">
 
-  <h1>~~~ Formulário ~~~</h1>
-  <hr>
+  <!-- Main Container -->
+  <div class="container mx-auto px-4 py-8 max-w-2xl">
+    
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-white mb-2">Formulário de Cadastro</h1>
+      <p class="text-white/80">Preencha seus dados abaixo</p>
+    </div>
 
-  <form action="#" method="post">
-    <table>
-      <tr>
-        <td><b>Nome:</b></td>
-        <td><input type="text" name="nome" size="30"></td>
-      </tr>
-      <tr>
-        <td><b>Email:</b></td>
-        <td><input type="email" name="email" size="30"></td>
-      </tr>
-      <tr>
-        <td><b>Senha:</b></td>
-        <td><input type="password" name="senha" size="30"></td>
-      </tr>
-      <tr>
-        <td><b>Idade:</b></td>
-        <td><input type="number" name="idade" size="5" min="1" max="120"></td>
-      </tr>
-      <tr>
-        <td><b>Sexo:</b></td>
-        <td>
-          <input type="radio" name="sexo" value="masculino"> Masculino
-          <input type="radio" name="sexo" value="feminino"> Feminino
-        </td>
-      </tr>
-      <tr>
-        <td><b>Estado:</b></td>
-        <td>
-          <select name="estado">
-            <option value="">-- Selecione --</option>
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="outros">Outros</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td><b>Interesses:</b></td>
-        <td>
-          <input type="checkbox" name="interesse" value="musica"> Música
-          <input type="checkbox" name="interesse" value="esporte"> Esporte
-          <input type="checkbox" name="interesse" value="tecnologia"> Tecnologia
-          <input type="checkbox" name="interesse" value="cinema"> Cinema
-        </td>
-      </tr>
-      <tr>
-        <td><b>Observações:</b></td>
-        <td><textarea name="obs" rows="4" cols="30"></textarea></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="center">
-          <input type="submit" value="Enviar">
-          <input type="reset" value="Limpar">
-        </td>
-      </tr>
-    </table>
-  </form>
+    <!-- Form Card -->
+    <div class="card bg-base-100 shadow-2xl">
+      <div class="card-body">
+        <form action="#" method="post" class="space-y-4">
+          
+          <!-- Nome -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Nome</span>
+            </label>
+            <input type="text" name="nome" placeholder="Digite seu nome completo" 
+                   class="input input-bordered w-full" />
+          </div>
 
-  <hr>
+          <!-- Email -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Email</span>
+            </label>
+            <input type="email" name="email" placeholder="seuemail@exemplo.com" 
+                   class="input input-bordered w-full" />
+          </div>
+
+          <!-- Senha -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Senha</span>
+            </label>
+            <input type="password" name="senha" placeholder="••••••••" 
+                   class="input input-bordered w-full" />
+          </div>
+
+          <!-- Idade -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Idade</span>
+            </label>
+            <input type="number" name="idade" placeholder="18" min="1" max="120" 
+                   class="input input-bordered w-full" />
+          </div>
+
+          <!-- Sexo -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Sexo</span>
+            </label>
+            <div class="flex gap-4">
+              <label class="label cursor-pointer gap-2">
+                <input type="radio" name="sexo" value="masculino" class="radio radio-primary" />
+                <span class="label-text">Masculino</span>
+              </label>
+              <label class="label cursor-pointer gap-2">
+                <input type="radio" name="sexo" value="feminino" class="radio radio-primary" />
+                <span class="label-text">Feminino</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Estado -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Estado</span>
+            </label>
+            <select name="estado" class="select select-bordered w-full">
+              <option value="">-- Selecione --</option>
+              <option value="SP">São Paulo</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+
+          <!-- Interesses -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Interesses</span>
+            </label>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="label cursor-pointer justify-start gap-2">
+                <input type="checkbox" name="interesse" value="musica" class="checkbox checkbox-primary" />
+                <span class="label-text">Música</span>
+              </label>
+              <label class="label cursor-pointer justify-start gap-2">
+                <input type="checkbox" name="interesse" value="esporte" class="checkbox checkbox-primary" />
+                <span class="label-text">Esporte</span>
+              </label>
+              <label class="label cursor-pointer justify-start gap-2">
+                <input type="checkbox" name="interesse" value="tecnologia" class="checkbox checkbox-primary" />
+                <span class="label-text">Tecnologia</span>
+              </label>
+              <label class="label cursor-pointer justify-start gap-2">
+                <input type="checkbox" name="interesse" value="cinema" class="checkbox checkbox-primary" />
+                <span class="label-text">Cinema</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Observações -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Observações</span>
+            </label>
+            <textarea name="obs" rows="4" placeholder="Escreva suas observações aqui..." 
+                      class="textarea textarea-bordered w-full"></textarea>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- Buttons -->
+          <div class="flex gap-4 justify-center">
+            <button type="submit" class="btn btn-primary btn-wide">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Enviar
+            </button>
+            <button type="reset" class="btn btn-ghost">Limpar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-6">
+      <p class="text-white/60 text-sm">Desenvolvido com ❤️ usando DaisyUI & Tailwind CSS</p>
+    </div>
+
+  </div>
 
 </body>
 </html>
