@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Formulário</title>
+  <style>
+    body {
+      background-color: #c0c0c0;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      margin: 0 auto;
+      border: 2px solid black;
+      background-color: #ffffff;
+      padding: 10px;
+    }
+    td {
+      padding: 4px;
+    }
+    input[type="submit"] {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>~~~ Formulário de Cadastro ~~~</h1>
+  <hr>
+
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td><b>Nome:</b></td>
+        <td><input type="text" name="nome" size="30"></td>
+      </tr>
+      <tr>
+        <td><b>Email:</b></td>
+        <td><input type="email" name="email" size="30"></td>
+      </tr>
+      <tr>
+        <td><b>Senha:</b></td>
+        <td><input type="password" name="senha" size="30"></td>
+      </tr>
+      <tr>
+        <td><b>Idade:</b></td>
+        <td><input type="number" name="idade" size="5" min="1" max="120"></td>
+      </tr>
+      <tr>
+        <td><b>Sexo:</b></td>
+        <td>
+          <input type="radio" name="sexo" value="masculino"> Masculino
+          <input type="radio" name="sexo" value="feminino"> Feminino
+        </td>
+      </tr>
+      <tr>
+        <td><b>Estado:</b></td>
+        <td>
+          <select name="estado">
+            <option value="">-- Selecione --</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="outros">Outros</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Interesses:</b></td>
+        <td>
+          <input type="checkbox" name="interesse" value="musica"> Música
+          <input type="checkbox" name="interesse" value="esporte"> Esporte
+          <input type="checkbox" name="interesse" value="tecnologia"> Tecnologia
+          <input type="checkbox" name="interesse" value="cinema"> Cinema
+        </td>
+      </tr>
+      <tr>
+        <td><b>Observações:</b></td>
+        <td><textarea name="obs" rows="4" cols="30"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Limpar">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <hr>
+  <p align="center"><small>Melhor visualizado em Internet Explorer 4.0 com resolução 800x600</small></p>
+
+</body>
+</html>
