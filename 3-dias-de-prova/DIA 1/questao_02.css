@@ -1,0 +1,44 @@
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.secao {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 700px;
+}
+
+.secao h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.secao p {
+    font-size: 16px;
+    color: #444;
+    text-align: justify;
+}
