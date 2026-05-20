@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Crédito para Festas & Eventos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .linha {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+
+    .linha:last-child {
+      border-bottom: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .desconto {
+      color: #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Orçamento de Eventos — Infinity Bank</h2>
+
+    <label for="pacote">Pacote:</label>
+    <select id="pacote">
+      <option value="50">Standard — R$ 50,00 por pessoa</option>
+      <option value="80">Premium — R$ 80,00 por pessoa</option>
+      <option value="120">Infinity Deluxe — R$ 120,00 por pessoa</option>
+    </select>
+
+    <label for="pessoas">Quantidade de pessoas:</label>
+    <input type="number" id="pessoas" placeholder="Ex: 80" min="1" />
+
+    <button id="btnCalcular">Calcular Orçamento</button>
+
+    <div id="resultado">
+      <div class="linha">
+        <span>Custo Bruto:</span>
+        <span id="custoBruto"></span>
+      </div>
+      <div class="linha">
+        <span>Taxa de Serviço (10%):</span>
+        <span id="taxaServico"></span>
+      </div>
+      <div class="linha desconto" id="linhaDesconto" style="display: none;">
+        <span>Desconto Fidelidade (5%):</span>
+        <span id="desconto"></span>
+      </div>
+      <div class="linha">
+        <span>Total Final:</span>
+        <span id="totalFinal"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script6.js"></script>
+
+</body>
+</html>

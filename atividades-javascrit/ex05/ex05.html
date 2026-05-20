@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Convidados VIP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .inputs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .inputs input {
+      flex: 1;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .inputs button {
+      padding: 10px 16px;
+      font-size: 15px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .inputs button:hover {
+      background-color: #222;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    .nome {
+      font-size: 15px;
+    }
+
+    .nome.riscado {
+      text-decoration: line-through;
+      color: #aaa;
+    }
+
+    .acoes {
+      display: flex;
+      gap: 6px;
+    }
+
+    .acoes button {
+      padding: 6px 10px;
+      font-size: 13px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .btn-concluir  { background-color: #28a745; }
+    .btn-editar    { background-color: #007bff; }
+    .btn-excluir   { background-color: #dc3545; }
+
+    .btn-concluir:hover { background-color: #1e7e34; }
+    .btn-editar:hover   { background-color: #0056b3; }
+    .btn-excluir:hover  { background-color: #a71d2a; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Infinity Bank — Lista de Convidados VIP</h2>
+
+    <div class="inputs">
+      <input type="text" id="inputNome" placeholder="Nome do convidado" />
+      <button id="btnAdicionar">Adicionar</button>
+    </div>
+
+    <ul id="lista"></ul>
+  </div>
+
+  <script src="script5.js"></script>
+
+</body>
+</html>
